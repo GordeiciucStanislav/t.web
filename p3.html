@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+     	<title>3 pagina</title>
+
+        <link href="css.css" rel="stylesheet" type="text/css">
+
+     </head>
+
+    <body>
+    	
+        <div class="navbar">
+          <a href="">Contacte</a>
+          <a href="http://rezumatecarti.robloguri.info/2019/09/rezumat-scurt-povestea-unui-om-lenes-ion-creanga.html" target=»_blank»>Rezumat</a>
+          <div class="dropdown">
+          <button class="dropbtn" onclick="myFunction()">Alege pagina<i class="fa fa-caret-down"></i></button>
+          <div class="dropdown-content" id="myDropdown"> 
+            <a href="index.html">Prima pagina</a>
+            <a href="p2.html">A doua pagina</a>
+            <a href="p3.html" style="color:blue;">A treia pagina</a>
+          </div>
+          </div>
+            <a href="javascript:void(0);" onclick="Font('txleft',5);Font('txrigh',5);">Marire text</a>
+            <a href="javascript:void(0);" onclick="Font('txleft',-5);Font('txrigh',-5);">Micsorare text</a> 
+        </div>
+
+        <h1 class="titlu">Povestea unui om lenes</h1>
+
+        <img class="carte" src="img/carte.png">
+
+        <img src="img/3.jpg" class="img3">
+
+        <a href="p2.html"> <img class="lt" src="img/left.png"></a>
+
+    	<div id="txleft" style="font-size: 20px;">&nbsp;&nbsp;&nbsp;&nbsp;Cucoana atunci, cu toată bunăvoinţa ce avea, se lehămeteşte şi de binefacere şi de tot, zicând:<br>&nbsp;&nbsp;&nbsp;&nbsp; – Oameni buni, faceţi dar cum v-a lumina Dumnezeu!<br>&nbsp;&nbsp;&nbsp;&nbsp; Iar sătenii duc pe leneş la locul cuvenit, şi-i fac feliul.<br>&nbsp;&nbsp;&nbsp;&nbsp; Şi iacă aşa au scăpat şi leneşul acela de săteni şi sătenii aceia de dânsul.<br>&nbsp;&nbsp;&nbsp;&nbsp;Mai poftească de acum şi alţi leneşi în satul acela, dacă le dă mâna şi-i ţine cureaua.<br>&nbsp;&nbsp;&nbsp;&nbsp; Ş-am încălecat pe-o şea, şi v-am spus povestea aşa.</div>
+
+        <div id="txrigh" style="font-size: 40px;left: 60%;top:30%;">Autor: Ion Creanga</div>
+        
+       <a href="https://ro.wikipedia.org/wiki/Ion_Creang%C4%83" target=»_blank»><img src="img/autor.jpg" class="ion"></a>
+
+        <script>
+
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        window.onclick = function(e) {
+          if (!e.target.matches('.dropbtn')) {
+          var myDropdown = document.getElementById("myDropdown");
+            if (myDropdown.classList.contains('show')) {
+              myDropdown.classList.remove('show');
+            }
+          }
+        }
+        function Font(element,step)
+        {
+        step = parseInt(step,10);
+        var el = document.getElementById(element);
+        var curFont = parseInt(el.style.fontSize,10);
+        el.style.fontSize = (curFont+step) + 'px';
+        }
+        </script>
+     </body>
+
+ </html>
